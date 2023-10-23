@@ -1,0 +1,20 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "rgName": {
+            "value": "ASE-T-DS-RG"
+        },
+        "rgLocation": {
+            "value": "australiasoutheast"
+        },
+        "tags": {
+            "value": {
+                "Application": "Digital Signage and Wayfinding",
+                "Business Area": "TSD",
+                "Business Owner": "Rupert Duffy",
+                "Environment": "Test"
+            }
+        }
+    }
+}

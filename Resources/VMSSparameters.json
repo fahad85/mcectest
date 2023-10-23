@@ -1,0 +1,123 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "location": {
+            "value": "australiasoutheast"
+        },
+        "osDiskType": {
+            "value": "Premium_LRS"
+        },
+        "dataDisks": {
+            "value": [
+                {
+                    "lun": 0,
+                    "createOption": "empty",
+                    "caching": "ReadOnly",
+                    "writeAcceleratorEnabled": false,
+                    "id": null,
+                    "name": "ASE-T-DS-VMSS_DataDisk_0",
+                    "storageAccountType": "Premium_LRS",
+                    "diskSizeGB": 64,
+                    "diskIOPSReadWrite": -1,
+                    "diskMBpsReadWrite": -1,
+                    "diskEncryptionSet": null
+                }
+            ]
+        },
+        "addressPrefixes": {
+            "value": [
+                "10.0.0.0/16"
+            ]
+        },
+        "subnets": {
+            "value": [
+                {
+                    "name": "default",
+                    "properties": {
+                        "addressPrefix": "10.0.0.0/20"
+                    }
+                }
+            ]
+        },
+        "virtualNetworkId": {
+            "value": "/subscriptions/087c56ac-b7f1-4e04-9b64-7ad633babb2e/resourceGroups/ASE-T-DS-RG/providers/Microsoft.Network/virtualNetworks/ASE-T-DS-RG-vnet"
+        },
+        "virtualNetworkName": {
+            "value": "ASE-T-DS-RG-vnet"
+        },
+        "networkSecurityGroups": {
+            "value": [
+                {
+                    "name": "basicNsgASE-T-DS-RG-vnet-nic01",
+                    "id": "/subscriptions/087c56ac-b7f1-4e04-9b64-7ad633babb2e/resourceGroups/ASE-T-DS-RG/providers/Microsoft.Network/networkSecurityGroups/basicNsgASE-T-DS-RG-vnet-nic01",
+                    "rules": []
+                }
+            ]
+        },
+        "networkInterfaceConfigurations": {
+            "value": [
+                {
+                    "name": "ASE-T-DS-RG-vnet-nic01",
+                    "primary": true,
+                    "subnetId": "/subscriptions/087c56ac-b7f1-4e04-9b64-7ad633babb2e/resourceGroups/ASE-T-DS-RG/providers/Microsoft.Network/virtualNetworks/ASE-T-DS-RG-vnet/subnets/default",
+                    "applicationGatewayBackendAddressPools": [],
+                    "loadBalancerBackendAddressPools": [],
+                    "applicationSecurityGroups": [],
+                    "loadBalancerInboundNatPools": [],
+                    "enableAcceleratedNetworking": false,
+                    "nsgName": "basicNsgASE-T-DS-RG-vnet-nic01",
+                    "nsgId": "/subscriptions/087c56ac-b7f1-4e04-9b64-7ad633babb2e/resourceGroups/ASE-T-DS-RG/providers/Microsoft.Network/networkSecurityGroups/basicNsgASE-T-DS-RG-vnet-nic01",
+                    "pipName": "publicIp-ASE-T-DS-RG-vnet-nic01"
+                }
+            ]
+        },
+        "vmName": {
+            "value": "ASE-T-DS-VMSS"
+        },
+        "virtualMachineScaleSetName": {
+            "value": "ASE-T-DS-VMSS"
+        },
+        "instanceCount": {
+            "value": "2"
+        },
+        "instanceSize": {
+            "value": "Standard_D4s_v3"
+        },
+        "scaleInPolicy": {
+            "value": {
+                "rules": [
+                    "Default"
+                ],
+                "forceDeletion": false
+            }
+        },
+        "upgradePolicy": {
+            "value": "Manual"
+        },
+        "adminUsername": {
+            "value": "admin-dsvmss"
+        },
+        "adminPassword": {
+            "value": null
+        },
+        "patchMode": {
+            "value": "AutomaticByOS"
+        },
+        "enableHotpatching": {
+            "value": false
+        },
+        "securityType": {
+            "value": "TrustedLaunch"
+        },
+        "secureBoot": {
+            "value": true
+        },
+        "vTPM": {
+            "value": true
+        },
+        "platformFaultDomainCount": {
+            "value": "1"
+        }
+    }
+}
