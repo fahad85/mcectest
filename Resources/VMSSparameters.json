@@ -118,6 +118,14 @@
         },
         "platformFaultDomainCount": {
             "value": "1"
+        },
+        "resourceTags": {
+            "value": {
+                "Application": "Digital Signage and Wayfinding",
+                "Business Area": "TSD",
+                "Business Owner": "David Strangio",
+                "Environment": "Test"
+            }
         }
     }
 }

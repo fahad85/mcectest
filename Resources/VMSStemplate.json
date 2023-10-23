@@ -51,7 +51,7 @@
             "type": "string"
         },
         "adminPassword": {
-            "type": "secureString"
+            "type": "securestring"
         },
         "patchMode": {
             "type": "string"
@@ -90,12 +90,7 @@
                 },
                 "subnets": "[parameters('subnets')]"
             },
-            "tags": {
-                "Application": "Digital Signage and Wayfinding",
-                "Business Area": "TSD",
-                "Business Owner": "David Strangio",
-                "Environment": "Test"
-            }
+            "tags": "[parameters('resourceTags')]"
         },
         {
             "name": "[parameters('networkSecurityGroups')[copyIndex()].name]",
@@ -109,12 +104,7 @@
                 "name": "networkSecurityGroups",
                 "count": "[length(parameters('networkSecurityGroups'))]"
             },
-            "tags": {
-                "Application": "Digital Signage and Wayfinding",
-                "Business Area": "TSD",
-                "Business Owner": "David Strangio",
-                "Environment": "Test"
-            }
+            "tags": "[parameters('resourceTags')]"
         },
         {
             "name": "[parameters('virtualMachineScaleSetName')]",
@@ -130,7 +120,7 @@
                 "virtualMachineProfile": {
                     "storageProfile": {
                         "osDisk": {
-                            "createOption": "fromImage",
+                            "createOption": "FromImage",
                             "caching": "ReadWrite",
                             "managedDisk": {
                                 "storageAccountType": "[parameters('osDiskType')]"
@@ -233,12 +223,7 @@
                 "name": "[parameters('instanceSize')]",
                 "capacity": "[int(parameters('instanceCount'))]"
             },
-            "tags": {
-                "Application": "Digital Signage and Wayfinding",
-                "Business Area": "TSD",
-                "Business Owner": "David Strangio",
-                "Environment": "Test"
-            }
+            "tags": "[parameters('resourceTags')]"
         }
     ],
     "outputs": {
