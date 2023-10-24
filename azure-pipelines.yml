@@ -23,6 +23,7 @@ steps:
     location: 'Australia Southeast'
     templateLocation: 'URL of the file'
     csmFileLink: 'https://raw.githubusercontent.com/fahad85/mcectest/main/Resources/VMSStemplate.json'
-    #overrideParameters: '-projectName DigitalSignage'
+    csmParametersFileLink: 'https://raw.githubusercontent.com/fahad85/mcectest/main/Resources/VMSSparameters.json'
     deploymentMode: 'Incremental'
+    #overrideParameters: '-projectName DigitalSignage'
     deploymentName: 'TestPipelineTemplate'
