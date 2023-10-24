@@ -22,7 +22,7 @@ steps:
     resourceGroupName: 'ASE-T-DS-RG'
     location: 'Australia Southeast'
     templateLocation: 'URL of the file'
-    csmFileLink: 'https://dev.azure.com/mcecdevops/_git/Digital%20Signage%20Project?path=/Resources/VMSStemplate.json'
+    csmFileLink: 'https://raw.githubusercontent.com/fahad85/MCEC/main/azure-pipelines.yml?token=GHSAT0AAAAAACJJWNVTZQ4HH2WY7RD3CP26ZJXCIJQ'
     overrideParameters: '-projectName DigitalSignage'
     deploymentMode: 'Incremental'
     deploymentName: 'TestPipelineTemplate'
