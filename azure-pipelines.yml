@@ -1,0 +1,28 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+trigger:
+- main
+
+pool:
+  vmImage: ubuntu-latest
+
+steps:
+- script: echo Hello, world!
+  displayName: 'Run a one-line script'
+
+- task: AzureResourceManagerTemplateDeployment@3
+  inputs:
+    deploymentScope: 'Resource Group'
+    azureResourceManagerConnection: 'MCEC TEST(087c56ac-b7f1-4e04-9b64-7ad633babb2e)'
+    subscriptionId: '087c56ac-b7f1-4e04-9b64-7ad633babb2e'
+    action: 'Create Or Update Resource Group'
+    resourceGroupName: 'ASE-T-DS-RG'
+    location: 'Australia Southeast'
+    templateLocation: 'URL of the file'
+    csmFileLink: 'https://dev.azure.com/mcecdevops/_git/Digital%20Signage%20Project?path=/Resources/VMSStemplate.json'
+    overrideParameters: '-projectName DigitalSignage'
+    deploymentMode: 'Incremental'
+    deploymentName: 'TestPipelineTemplate'
