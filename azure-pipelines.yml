@@ -22,7 +22,7 @@ steps:
     resourceGroupName: 'ASE-T-DS-RG'
     location: 'Australia Southeast'
     templateLocation: 'URL of the file'
-    csmFileLink: 'VMSStemplate.json'
+    csmFileLink: 'https://raw.githubusercontent.com/fahad85/mcectest/main/VMSStemplate.json'
     overrideParameters: '-projectName DigitalSignage'
     deploymentMode: 'Incremental'
     deploymentName: 'TestPipelineTemplate'
