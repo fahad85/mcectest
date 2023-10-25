@@ -90,7 +90,7 @@
                 },
                 "subnets": "[parameters('subnets')]"
             },
-            "tags": "[parameters('resourceTags')]"
+            "resourceTags": "[parameters('resourceTags')]"
         },
         {
             "name": "[parameters('networkSecurityGroups')[copyIndex()].name]",
@@ -104,7 +104,7 @@
                 "name": "networkSecurityGroups",
                 "count": "[length(parameters('networkSecurityGroups'))]"
             },
-            "tags": "[parameters('resourceTags')]"
+            "resourceTags": "[parameters('resourceTags')]"
         },
         {
             "name": "[parameters('virtualMachineScaleSetName')]",
