@@ -223,7 +223,7 @@
                 "name": "[parameters('instanceSize')]",
                 "capacity": "[int(parameters('instanceCount'))]"
             },
-            "tags": "[parameters('resourceTags')]"
+            "resourceTags": "[parameters('resourceTags')]"
         }
     ],
     "outputs": {
