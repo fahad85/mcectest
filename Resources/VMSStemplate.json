@@ -74,18 +74,6 @@
         "resourceTags": {
             "type": "object"
         },
-        "Application": {
-            "type": "string"
-        },
-        "Business Area": {
-            "type": "string"
-        },
-        "Business Owner": {
-            "type": "string"
-        },
-        "Environment": {
-            "type": "string"
-        },
     },
     "variables": {
         "storageApiVersion": "2021-01-01",
