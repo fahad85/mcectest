@@ -96,11 +96,24 @@
             "value": "Manual"
         },
         "adminUsername": {
-            "value": "admin-dsvmss"
+          "reference": {
+            "keyVault": {
+              "id": "/subscriptions/087c56ac-b7f1-4e04-9b64-7ad633babb2e/resourceGroups/ASE-T-DS-RG/providers/Microsoft.KeyVault/vaults/ASE-T-DS-KV"
+            },
+            "secretName": "TestVMSSAdminUser"
+          }
         },
         "adminPassword": {
-            "value": null
+          "reference": {
+            "keyVault": {
+              "id": "/subscriptions/087c56ac-b7f1-4e04-9b64-7ad633babb2e/resourceGroups/ASE-T-DS-RG/providers/Microsoft.KeyVault/vaults/ASE-T-DS-KV"
+            },
+            "secretName": "TestVMSSAdminPwd"
+          }
         },
+#        "adminPassword": {
+#            "value": null
+#        },
         "patchMode": {
             "value": "AutomaticByOS"
         },
