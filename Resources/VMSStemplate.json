@@ -70,7 +70,22 @@
         },
         "platformFaultDomainCount": {
             "type": "string"
-        }
+        },
+        "resourceTags": {
+            "type": "object"
+        },
+        "Application": {
+            "type": "string"
+        },
+        "Business Area": {
+            "type": "string"
+        },
+        "Business Owner": {
+            "type": "string"
+        },
+        "Environment": {
+            "type": "string"
+        },
     },
     "variables": {
         "storageApiVersion": "2021-01-01",
@@ -90,7 +105,7 @@
                 },
                 "subnets": "[parameters('subnets')]"
             },
-            "resourceTags": "[parameters('resourceTags')]"
+            "tags": "[parameters('resourceTags')]"
         },
         {
             "name": "[parameters('networkSecurityGroups')[copyIndex()].name]",
@@ -104,7 +119,7 @@
                 "name": "networkSecurityGroups",
                 "count": "[length(parameters('networkSecurityGroups'))]"
             },
-            "resourceTags": "[parameters('resourceTags')]"
+            "tags": "[parameters('resourceTags')]"
         },
         {
             "name": "[parameters('virtualMachineScaleSetName')]",
@@ -223,7 +238,7 @@
                 "name": "[parameters('instanceSize')]",
                 "capacity": "[int(parameters('instanceCount'))]"
             },
-            "resourceTags": "[parameters('resourceTags')]"
+            "tags": "[parameters('resourceTags')]"
         }
     ],
     "outputs": {
