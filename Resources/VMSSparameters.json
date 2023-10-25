@@ -111,9 +111,6 @@
             "secretName": "TestVMSSAdminPwd"
           }
         },
-/*        "adminPassword": {
-#            "value": null
-        },*/
         "patchMode": {
             "value": "AutomaticByOS"
         },
